@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FGFocusController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="UVO-z9-P61"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-4r-5qn">
+                    <rect key="frame" x="164" y="180" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6lI-TE-Pc4"/>
+                        <constraint firstAttribute="height" constant="48" id="E7I-jv-RCf"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="neu-t8-bPp"/>
+                        <constraint firstAttribute="width" constant="48" id="tEU-wM-XVu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsp-4c-DVE">
+                    <rect key="frame" x="88" y="393" width="200" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="447-Nl-Xgt"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="DUp-3a-AFt"/>
+                        <constraint firstAttribute="height" constant="35" id="OMq-AH-GBd"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="WTW-QU-oPn"/>
+                    </constraints>
+                    <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="friendsTrend_login_click">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6E-nA-Gzi">
+                    <rect key="frame" x="53" y="292" width="270" height="61"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="Klp-Jb-o7X"/>
+                    </constraints>
+                    <string key="text">快快登录吧, 关注百思最in牛人
+好友动态让你过把瘾儿~
+欧耶~~~~!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zn6-4r-5qn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="180" id="1Pg-yu-c4i"/>
+                <constraint firstItem="h6E-nA-Gzi" firstAttribute="top" secondItem="zn6-4r-5qn" secondAttribute="bottom" constant="40" id="EdU-lz-OWw"/>
+                <constraint firstItem="lsp-4c-DVE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y65-be-nbc"/>
+                <constraint firstItem="lsp-4c-DVE" firstAttribute="top" secondItem="h6E-nA-Gzi" secondAttribute="bottom" constant="40" id="ZXH-Be-5vm"/>
+                <constraint firstItem="h6E-nA-Gzi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eHH-Z8-T2r"/>
+                <constraint firstItem="lsp-4c-DVE" firstAttribute="top" secondItem="h6E-nA-Gzi" secondAttribute="bottom" constant="40" id="l9M-dm-cFL"/>
+                <constraint firstItem="h6E-nA-Gzi" firstAttribute="top" secondItem="zn6-4r-5qn" secondAttribute="bottom" constant="64" id="wvF-iE-vbR"/>
+                <constraint firstItem="zn6-4r-5qn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="x14-NG-ntk"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friendsTrend_login" width="243" height="48"/>
+        <image name="friendsTrend_login_click" width="243" height="48"/>
+        <image name="header_cry_icon" width="48" height="48"/>
+    </resources>
+</document>
