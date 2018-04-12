@@ -41,6 +41,8 @@
 @property (nonatomic, assign) FGTopicType type;
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
+/** 视频时长 */
+@property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
 
@@ -57,4 +59,6 @@
 
 /**  voice尺寸 **/
 @property (nonatomic, assign, readonly) CGRect voiceF;
+/**  video尺寸 **/
+@property (nonatomic, assign, readonly) CGRect videoF;
 @end

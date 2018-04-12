@@ -90,6 +90,16 @@
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
             _cellHeight += voiceH + FGMargin;
+        }else if (self.type == FGTopicVideo){ // 视频帖子
+            // 计算视频图片的frame
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            CGFloat videoX = FGMargin;
+            CGFloat videoY = FGTextY + textH + FGMargin;
+            
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + FGMargin;
         }
         
         _cellHeight += FGTabbarH + FGMargin;

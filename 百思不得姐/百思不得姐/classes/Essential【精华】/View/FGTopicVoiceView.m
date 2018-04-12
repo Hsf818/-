@@ -9,6 +9,7 @@
 #import "FGTopicVoiceView.h"
 #import "UIImageView+WebCache.h"
 #import "FGTopics.h"
+#import "FGTopicPictureViewController.h"
 
 @interface FGTopicVoiceView()
 @property (weak, nonatomic) IBOutlet UILabel *voiceTime;
@@ -26,8 +27,17 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
+    // 给图片添加监听器
+    self.voiceImage.userInteractionEnabled = YES;
+    [self.voiceImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
 
+- (void)showPicture
+{
+    FGTopicPictureViewController *showPicture = [[FGTopicPictureViewController alloc] init];
+    showPicture.topics = self.topics;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
+}
 - (void)setTopics:(FGTopics *)topics{
     _topics = topics;
     // 图片

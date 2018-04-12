@@ -11,6 +11,7 @@
 #import "FGTopics.h"
 #import "FGTopicPictureView.h"
 #import "FGTopicVoiceView.h"
+#import "FGTopicVideoView.h"
 
 @interface FGTopicCell()
 
@@ -25,9 +26,18 @@
 
 @property (nonatomic, weak) FGTopicPictureView *pictureView;
 @property (nonatomic, weak) FGTopicVoiceView *voiceView;
-
+@property (nonatomic, weak) FGTopicVideoView *videoView;
 @end
 @implementation FGTopicCell
+- (FGTopicVideoView *)videoView
+{
+    if(!_videoView){
+        FGTopicVideoView *videoView = [FGTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 
 - (FGTopicPictureView *)pictureView
 {
@@ -71,6 +81,7 @@
     CGFloat textH = [topics.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
     
     if (topics.type == FGTopicPicture){// 图片帖子
+        self.pictureView.hidden = NO;
         self.pictureView.topics = topics;
         if(topics.pictureF.origin.x == 0){
             // 图片显示出来的宽度
@@ -91,7 +102,11 @@
         }else{
             self.pictureView.frame = topics.pictureF;
         }
+        
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
     }else if (topics.type == FGTopicVoice){// 声音帖子
+        self.voiceView.hidden = NO;
         self.voiceView.topics = topics;
         if(topics.voiceF.origin.x == 0){
             CGFloat voiceW = maxSize.width;
@@ -102,6 +117,29 @@
         }else{
             self.voiceView.frame = topics.voiceF;
         }
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topics.type == FGTopicVideo){// 视频帖子
+        self.videoView.hidden = NO;
+        self.videoView.topics = topics;
+        if(topics.videoF.origin.x == 0){
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * topics.height / topics.width;
+            CGFloat videoX = FGMargin;
+            CGFloat videoY = FGTextY + textH + FGMargin;
+            
+            self.videoView.frame = CGRectMake(videoX, videoY, videoW, videoH);
+        }else{
+            self.videoView.frame = topics.videoF;
+        }
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    }else{ // 段子
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
     // 设置文字
     self.text_label.text = topics.text;

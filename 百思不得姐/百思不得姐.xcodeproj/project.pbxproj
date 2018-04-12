@@ -30,6 +30,8 @@
 		F341D90020692467002DBF73 /* FGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8FE20692466002DBF73 /* FGProgressView.m */; };
 		F3684213207F124900672DC8 /* FGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3684212207F124900672DC8 /* FGTopicVoiceView.m */; };
 		F3684215207F125700672DC8 /* FGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3684214207F125700672DC8 /* FGTopicVoiceView.xib */; };
+		F3684218207FA29D00672DC8 /* FGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3684217207FA29D00672DC8 /* FGTopicVideoView.m */; };
+		F368421A207FA2BB00672DC8 /* FGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3684219207FA2BB00672DC8 /* FGTopicVideoView.xib */; };
 		F36BA62B200B8ABF005D585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36BA62A200B8ABF005D585D /* Assets.xcassets */; };
 		F36BA639200B8ABF005D585D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA638200B8ABF005D585D /* _____Tests.m */; };
 		F36BA644200B8ABF005D585D /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA643200B8ABF005D585D /* _____UITests.m */; };
@@ -114,6 +116,9 @@
 		F3684211207F124900672DC8 /* FGTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicVoiceView.h; sourceTree = "<group>"; };
 		F3684212207F124900672DC8 /* FGTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicVoiceView.m; sourceTree = "<group>"; };
 		F3684214207F125700672DC8 /* FGTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGTopicVoiceView.xib; sourceTree = "<group>"; };
+		F3684216207FA29D00672DC8 /* FGTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicVideoView.h; sourceTree = "<group>"; };
+		F3684217207FA29D00672DC8 /* FGTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicVideoView.m; sourceTree = "<group>"; };
+		F3684219207FA2BB00672DC8 /* FGTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGTopicVideoView.xib; sourceTree = "<group>"; };
 		F36BA61B200B8ABF005D585D /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36BA62A200B8ABF005D585D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36BA62F200B8ABF005D585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -347,6 +352,8 @@
 		F36BA657200B8CB7005D585D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F341D8FF20692466002DBF73 /* FGProgressView.h */,
+				F341D8FE20692466002DBF73 /* FGProgressView.m */,
 				F341D8CD205E2509002DBF73 /* FGRecommendTagsCell.h */,
 				F341D8CE205E2509002DBF73 /* FGRecommendTagsCell.m */,
 				F341D8CF205E2509002DBF73 /* FGRecommendTagsCell.xib */,
@@ -356,11 +363,12 @@
 				F341D8F62067B82C002DBF73 /* FGTopicPictureView.h */,
 				F341D8F72067B82C002DBF73 /* FGTopicPictureView.m */,
 				F341D8F92067B83C002DBF73 /* FGTopicPictureView.xib */,
-				F341D8FF20692466002DBF73 /* FGProgressView.h */,
-				F341D8FE20692466002DBF73 /* FGProgressView.m */,
 				F3684211207F124900672DC8 /* FGTopicVoiceView.h */,
 				F3684212207F124900672DC8 /* FGTopicVoiceView.m */,
 				F3684214207F125700672DC8 /* FGTopicVoiceView.xib */,
+				F3684216207FA29D00672DC8 /* FGTopicVideoView.h */,
+				F3684217207FA29D00672DC8 /* FGTopicVideoView.m */,
+				F3684219207FA2BB00672DC8 /* FGTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -678,6 +686,7 @@
 				F32123562075247B006F3C78 /* FGPublishView.xib in Resources */,
 				F36BA6B520124158005D585D /* FGRightCell.xib in Resources */,
 				F3684215207F125700672DC8 /* FGTopicVoiceView.xib in Resources */,
+				F368421A207FA2BB00672DC8 /* FGTopicVideoView.xib in Resources */,
 				F341D8FA2067B83C002DBF73 /* FGTopicPictureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,6 +789,7 @@
 				F36BA685200B8E5F005D585D /* FGMeController.m in Sources */,
 				F3212344206A0BC1006F3C78 /* FGTopicPictureViewController.m in Sources */,
 				F3212350206A98D1006F3C78 /* FGPublishViewController.m in Sources */,
+				F3684218207FA29D00672DC8 /* FGTopicVideoView.m in Sources */,
 				F341D90020692467002DBF73 /* FGProgressView.m in Sources */,
 				F36BA6AD201237A3005D585D /* FGRightModel.m in Sources */,
 				F341D8EE20610EAB002DBF73 /* FGTopicCell.m in Sources */,
