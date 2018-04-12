@@ -6,13 +6,13 @@
 //  Copyright © 2018年 衡申发. All rights reserved.
 //
 
-#import "FGTopicView.h"
+#import "FGTopicPictureView.h"
 #import "UIImageView+WebCache.h"
 #import "FGTopics.h"
 #import "FGProgressView.h"
 #import "FGTopicPictureViewController.h"
 
-@interface FGTopicView()
+@interface FGTopicPictureView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *gif_Image;
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation FGTopicView
+@implementation FGTopicPictureView
 
 +(instancetype)pictureView{
     

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="VL3-KR-5IK" customClass="FGTopicView">
+        <view contentMode="scaleToFill" id="VL3-KR-5IK" customClass="FGTopicPictureView">
             <rect key="frame" x="0.0" y="0.0" width="422" height="417"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>

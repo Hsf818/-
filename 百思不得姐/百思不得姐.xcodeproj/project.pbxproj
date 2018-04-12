@@ -19,20 +19,17 @@
 		F341D8D0205E2509002DBF73 /* FGRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8CE205E2509002DBF73 /* FGRecommendTagsCell.m */; };
 		F341D8D1205E2509002DBF73 /* FGRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F341D8CF205E2509002DBF73 /* FGRecommendTagsCell.xib */; };
 		F341D8D4205E2B26002DBF73 /* FGRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8D3205E2B26002DBF73 /* FGRecommendModel.m */; };
-		F341D8D7205F74C7002DBF73 /* FGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8D6205F74C7002DBF73 /* FGAllViewController.m */; };
-		F341D8DA205F74DD002DBF73 /* FGVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8D9205F74DD002DBF73 /* FGVoiceViewController.m */; };
-		F341D8DD205F74F8002DBF73 /* FGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8DC205F74F8002DBF73 /* FGVideoViewController.m */; };
-		F341D8E0205F750A002DBF73 /* FGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8DF205F750A002DBF73 /* FGPictureViewController.m */; };
-		F341D8E3205F751E002DBF73 /* FGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8E2205F751E002DBF73 /* FGWordViewController.m */; };
 		F341D8E72060ED02002DBF73 /* FGTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8E62060ED02002DBF73 /* FGTopics.m */; };
 		F341D8EA20610788002DBF73 /* FGGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8E920610788002DBF73 /* FGGlobal.m */; };
 		F341D8EE20610EAB002DBF73 /* FGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8EC20610EAB002DBF73 /* FGTopicCell.m */; };
 		F341D8EF20610EAB002DBF73 /* FGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F341D8ED20610EAB002DBF73 /* FGTopicCell.xib */; };
 		F341D8F220661787002DBF73 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8F120661787002DBF73 /* NSDate+Extension.m */; };
 		F341D8F520663C6D002DBF73 /* FGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8F420663C6D002DBF73 /* FGTopicViewController.m */; };
-		F341D8F82067B82C002DBF73 /* FGTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8F72067B82C002DBF73 /* FGTopicView.m */; };
-		F341D8FA2067B83C002DBF73 /* FGTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F341D8F92067B83C002DBF73 /* FGTopicView.xib */; };
+		F341D8F82067B82C002DBF73 /* FGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8F72067B82C002DBF73 /* FGTopicPictureView.m */; };
+		F341D8FA2067B83C002DBF73 /* FGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F341D8F92067B83C002DBF73 /* FGTopicPictureView.xib */; };
 		F341D90020692467002DBF73 /* FGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F341D8FE20692466002DBF73 /* FGProgressView.m */; };
+		F3684213207F124900672DC8 /* FGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3684212207F124900672DC8 /* FGTopicVoiceView.m */; };
+		F3684215207F125700672DC8 /* FGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3684214207F125700672DC8 /* FGTopicVoiceView.xib */; };
 		F36BA62B200B8ABF005D585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36BA62A200B8ABF005D585D /* Assets.xcassets */; };
 		F36BA639200B8ABF005D585D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA638200B8ABF005D585D /* _____Tests.m */; };
 		F36BA644200B8ABF005D585D /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA643200B8ABF005D585D /* _____UITests.m */; };
@@ -98,16 +95,6 @@
 		F341D8CF205E2509002DBF73 /* FGRecommendTagsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGRecommendTagsCell.xib; sourceTree = "<group>"; };
 		F341D8D2205E2B26002DBF73 /* FGRecommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGRecommendModel.h; sourceTree = "<group>"; };
 		F341D8D3205E2B26002DBF73 /* FGRecommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGRecommendModel.m; sourceTree = "<group>"; };
-		F341D8D5205F74C7002DBF73 /* FGAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGAllViewController.h; sourceTree = "<group>"; };
-		F341D8D6205F74C7002DBF73 /* FGAllViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGAllViewController.m; sourceTree = "<group>"; };
-		F341D8D8205F74DD002DBF73 /* FGVoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGVoiceViewController.h; sourceTree = "<group>"; };
-		F341D8D9205F74DD002DBF73 /* FGVoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGVoiceViewController.m; sourceTree = "<group>"; };
-		F341D8DB205F74F8002DBF73 /* FGVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGVideoViewController.h; sourceTree = "<group>"; };
-		F341D8DC205F74F8002DBF73 /* FGVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGVideoViewController.m; sourceTree = "<group>"; };
-		F341D8DE205F750A002DBF73 /* FGPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGPictureViewController.h; sourceTree = "<group>"; };
-		F341D8DF205F750A002DBF73 /* FGPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGPictureViewController.m; sourceTree = "<group>"; };
-		F341D8E1205F751E002DBF73 /* FGWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGWordViewController.h; sourceTree = "<group>"; };
-		F341D8E2205F751E002DBF73 /* FGWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGWordViewController.m; sourceTree = "<group>"; };
 		F341D8E52060ED02002DBF73 /* FGTopics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopics.h; sourceTree = "<group>"; };
 		F341D8E62060ED02002DBF73 /* FGTopics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopics.m; sourceTree = "<group>"; };
 		F341D8E820610788002DBF73 /* FGGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGGlobal.h; sourceTree = "<group>"; };
@@ -119,11 +106,14 @@
 		F341D8F120661787002DBF73 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		F341D8F320663C6D002DBF73 /* FGTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicViewController.h; sourceTree = "<group>"; };
 		F341D8F420663C6D002DBF73 /* FGTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicViewController.m; sourceTree = "<group>"; };
-		F341D8F62067B82C002DBF73 /* FGTopicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicView.h; sourceTree = "<group>"; };
-		F341D8F72067B82C002DBF73 /* FGTopicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicView.m; sourceTree = "<group>"; };
-		F341D8F92067B83C002DBF73 /* FGTopicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGTopicView.xib; sourceTree = "<group>"; };
+		F341D8F62067B82C002DBF73 /* FGTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicPictureView.h; sourceTree = "<group>"; };
+		F341D8F72067B82C002DBF73 /* FGTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicPictureView.m; sourceTree = "<group>"; };
+		F341D8F92067B83C002DBF73 /* FGTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGTopicPictureView.xib; sourceTree = "<group>"; };
 		F341D8FE20692466002DBF73 /* FGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGProgressView.m; sourceTree = "<group>"; };
 		F341D8FF20692466002DBF73 /* FGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGProgressView.h; sourceTree = "<group>"; };
+		F3684211207F124900672DC8 /* FGTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTopicVoiceView.h; sourceTree = "<group>"; };
+		F3684212207F124900672DC8 /* FGTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTopicVoiceView.m; sourceTree = "<group>"; };
+		F3684214207F125700672DC8 /* FGTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGTopicVoiceView.xib; sourceTree = "<group>"; };
 		F36BA61B200B8ABF005D585D /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36BA62A200B8ABF005D585D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36BA62F200B8ABF005D585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -332,22 +322,12 @@
 			children = (
 				F36BA67D200B8E37005D585D /* FGEssentialController.h */,
 				F36BA67E200B8E37005D585D /* FGEssentialController.m */,
-				F341D8CA205E2342002DBF73 /* FGRecommendTagsTableViewController.h */,
-				F341D8CB205E2342002DBF73 /* FGRecommendTagsTableViewController.m */,
-				F341D8D5205F74C7002DBF73 /* FGAllViewController.h */,
-				F341D8D6205F74C7002DBF73 /* FGAllViewController.m */,
-				F341D8D8205F74DD002DBF73 /* FGVoiceViewController.h */,
-				F341D8D9205F74DD002DBF73 /* FGVoiceViewController.m */,
-				F341D8DB205F74F8002DBF73 /* FGVideoViewController.h */,
-				F341D8DC205F74F8002DBF73 /* FGVideoViewController.m */,
-				F341D8DE205F750A002DBF73 /* FGPictureViewController.h */,
-				F341D8DF205F750A002DBF73 /* FGPictureViewController.m */,
-				F341D8E1205F751E002DBF73 /* FGWordViewController.h */,
-				F341D8E2205F751E002DBF73 /* FGWordViewController.m */,
 				F341D8F320663C6D002DBF73 /* FGTopicViewController.h */,
 				F341D8F420663C6D002DBF73 /* FGTopicViewController.m */,
 				F3212341206A0BC1006F3C78 /* FGTopicPictureViewController.h */,
 				F3212342206A0BC1006F3C78 /* FGTopicPictureViewController.m */,
+				F341D8CA205E2342002DBF73 /* FGRecommendTagsTableViewController.h */,
+				F341D8CB205E2342002DBF73 /* FGRecommendTagsTableViewController.m */,
 				F3212343206A0BC1006F3C78 /* FGTopicPictureViewController.xib */,
 			);
 			path = Controller;
@@ -373,11 +353,14 @@
 				F341D8EB20610EAB002DBF73 /* FGTopicCell.h */,
 				F341D8EC20610EAB002DBF73 /* FGTopicCell.m */,
 				F341D8ED20610EAB002DBF73 /* FGTopicCell.xib */,
-				F341D8F62067B82C002DBF73 /* FGTopicView.h */,
-				F341D8F72067B82C002DBF73 /* FGTopicView.m */,
-				F341D8F92067B83C002DBF73 /* FGTopicView.xib */,
+				F341D8F62067B82C002DBF73 /* FGTopicPictureView.h */,
+				F341D8F72067B82C002DBF73 /* FGTopicPictureView.m */,
+				F341D8F92067B83C002DBF73 /* FGTopicPictureView.xib */,
 				F341D8FF20692466002DBF73 /* FGProgressView.h */,
 				F341D8FE20692466002DBF73 /* FGProgressView.m */,
+				F3684211207F124900672DC8 /* FGTopicVoiceView.h */,
+				F3684212207F124900672DC8 /* FGTopicVoiceView.m */,
+				F3684214207F125700672DC8 /* FGTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,7 +677,8 @@
 				F341D8EF20610EAB002DBF73 /* FGTopicCell.xib in Resources */,
 				F32123562075247B006F3C78 /* FGPublishView.xib in Resources */,
 				F36BA6B520124158005D585D /* FGRightCell.xib in Resources */,
-				F341D8FA2067B83C002DBF73 /* FGTopicView.xib in Resources */,
+				F3684215207F125700672DC8 /* FGTopicVoiceView.xib in Resources */,
+				F341D8FA2067B83C002DBF73 /* FGTopicPictureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,7 +771,6 @@
 			files = (
 				F36BA670200B8CB7005D585D /* main.m in Sources */,
 				F36BA6A22011B8F4005D585D /* FGNavgationController.m in Sources */,
-				F341D8D7205F74C7002DBF73 /* FGAllViewController.m in Sources */,
 				F36BA6A92011E13D005D585D /* FGRecommentTagCell.m in Sources */,
 				F36BA67C200B8D9E005D585D /* FGTabBarController.m in Sources */,
 				F32123542075246B006F3C78 /* FGPublishView.m in Sources */,
@@ -798,10 +781,7 @@
 				F3212344206A0BC1006F3C78 /* FGTopicPictureViewController.m in Sources */,
 				F3212350206A98D1006F3C78 /* FGPublishViewController.m in Sources */,
 				F341D90020692467002DBF73 /* FGProgressView.m in Sources */,
-				F341D8E3205F751E002DBF73 /* FGWordViewController.m in Sources */,
-				F341D8DA205F74DD002DBF73 /* FGVoiceViewController.m in Sources */,
 				F36BA6AD201237A3005D585D /* FGRightModel.m in Sources */,
-				F341D8DD205F74F8002DBF73 /* FGVideoViewController.m in Sources */,
 				F341D8EE20610EAB002DBF73 /* FGTopicCell.m in Sources */,
 				F341D8E72060ED02002DBF73 /* FGTopics.m in Sources */,
 				F36BA688200B8E95005D585D /* FGNewController.m in Sources */,
@@ -812,13 +792,13 @@
 				F36BA66F200B8CB7005D585D /* AppDelegate.m in Sources */,
 				F36BA694200B9335005D585D /* UIView+frame.m in Sources */,
 				F36BA693200B9335005D585D /* UIImage+image.m in Sources */,
+				F3684213207F124900672DC8 /* FGTopicVoiceView.m in Sources */,
 				F36BA698200B9BE0005D585D /* UIBarButtonItem+FGBarButtonItem.m in Sources */,
 				F36BA68B200B9261005D585D /* FGTabBar.m in Sources */,
 				F341D8F220661787002DBF73 /* NSDate+Extension.m in Sources */,
-				F341D8E0205F750A002DBF73 /* FGPictureViewController.m in Sources */,
 				F36BA6A52011DEC8005D585D /* FGRecommentModel.m in Sources */,
 				F36BA67F200B8E37005D585D /* FGEssentialController.m in Sources */,
-				F341D8F82067B82C002DBF73 /* FGTopicView.m in Sources */,
+				F341D8F82067B82C002DBF73 /* FGTopicPictureView.m in Sources */,
 				F341D8EA20610788002DBF73 /* FGGlobal.m in Sources */,
 				F36BA69E2011B86B005D585D /* FGRcommentController.m in Sources */,
 			);

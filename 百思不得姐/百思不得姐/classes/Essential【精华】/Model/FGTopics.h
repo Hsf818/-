@@ -39,11 +39,15 @@
 
 /** type **/
 @property (nonatomic, assign) FGTopicType type;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 
 /** cell高度 **/
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
 /**  picture尺寸 **/
-@property (nonatomic, assign) CGRect pictureF;
+@property (nonatomic, assign, readonly) CGRect pictureF;
 
 /**  picture尺寸 **/
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
@@ -51,4 +55,6 @@
 /**  picture尺寸 **/
 @property (nonatomic, assign) CGFloat progress;
 
+/**  voice尺寸 **/
+@property (nonatomic, assign, readonly) CGRect voiceF;
 @end

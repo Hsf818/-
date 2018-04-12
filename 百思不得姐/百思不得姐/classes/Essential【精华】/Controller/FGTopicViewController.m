@@ -35,6 +35,7 @@
     }
     return _topics;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -61,7 +62,7 @@ static NSString *FGTopicCellId = @"topic";
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 - (void)loadNewData{
@@ -133,14 +134,10 @@ static NSString *FGTopicCellId = @"topic";
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 
@@ -158,11 +155,6 @@ static NSString *FGTopicCellId = @"topic";
     // 取出模型数据
     FGTopics *topics = self.topics[indexPath.row];
     
-//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * FGMargin, MAXFLOAT);
-//
-//    CGFloat textH = [topics.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
-//
-//    CGFloat textY = 55 + textH + FGTabbarH + 2 * FGMargin;
     return topics.cellHeight;
 }
 

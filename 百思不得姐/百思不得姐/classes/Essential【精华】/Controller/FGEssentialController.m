@@ -9,11 +9,12 @@
 #import "FGEssentialController.h"
 #import "FGRecommendTagsTableViewController.h"
 
-#import "FGAllViewController.h"
-#import "FGWordViewController.h"
-#import "FGVideoViewController.h"
-#import "FGVoiceViewController.h"
-#import "FGPictureViewController.h"
+//#import "FGAllViewController.h"
+//#import "FGWordViewController.h"
+//#import "FGVideoViewController.h"
+//#import "FGVoiceViewController.h"
+//#import "FGPictureViewController.h"
+#import "FGTopicViewController.h"
 
 @interface FGEssentialController ()<UIScrollViewDelegate>
 
@@ -44,20 +45,29 @@
 }
 
 - (void)setupChildVCs{
-    FGAllViewController *all = [[FGAllViewController alloc]init];
+    FGTopicViewController *all = [[FGTopicViewController alloc]init];
+    all.title = @"全部";
+    all.type = FGTopicAll;
     [self addChildViewController:all];
     
-    FGVideoViewController *video = [[FGVideoViewController alloc]init];
-    
+    FGTopicViewController *video = [[FGTopicViewController alloc]init];
+    video.type = FGTopicVideo;
+    video.title = @"视频";
     [self addChildViewController:video];
     
-    FGVoiceViewController *voice = [[FGVoiceViewController alloc]init];
+    FGTopicViewController *voice = [[FGTopicViewController alloc]init];
+    voice.type = FGTopicVoice;
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
-    FGPictureViewController *picture = [[FGPictureViewController alloc]init];
+    FGTopicViewController *picture = [[FGTopicViewController alloc]init];
+    picture.type = FGTopicPicture;
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
-    FGWordViewController *word = [[FGWordViewController alloc]init];
+    FGTopicViewController *word = [[FGTopicViewController alloc]init];
+    word.type = FGTopicWord;
+    word.title = @"段子";
     [self addChildViewController:word];
     
 }
@@ -173,7 +183,7 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     // 取出子控制器
-    UITableViewController *vc = self.childViewControllers[index];
+    UIViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
     vc.view.y = 0; // 设置控制器view的y值为0(默认是20)
     vc.view.height = scrollView.height; // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)

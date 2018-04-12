@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class FGTopics;
 
-@interface FGTopicView : UIView
+@interface FGTopicPictureView : UIView
 
 + (instancetype)pictureView;
 

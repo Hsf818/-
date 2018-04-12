@@ -9,7 +9,8 @@
 #import "FGTopicCell.h"
 #import "UIImageView+WebCache.h"
 #import "FGTopics.h"
-#import "FGTopicView.h"
+#import "FGTopicPictureView.h"
+#import "FGTopicVoiceView.h"
 
 @interface FGTopicCell()
 
@@ -22,23 +23,34 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
 
-@property (nonatomic, weak) FGTopicView *pictureView;
+@property (nonatomic, weak) FGTopicPictureView *pictureView;
+@property (nonatomic, weak) FGTopicVoiceView *voiceView;
 
 @end
 @implementation FGTopicCell
 
-- (FGTopicView *)pictureView
+- (FGTopicPictureView *)pictureView
 {
     if(!_pictureView){
-        FGTopicView *pictureV = [FGTopicView pictureView];
+        FGTopicPictureView *pictureV = [FGTopicPictureView pictureView];
         [self.contentView addSubview:pictureV];
         _pictureView = pictureV;
     }
     return _pictureView;
 }
+
+- (FGTopicVoiceView *)voiceView
+{
+    if(!_voiceView){
+        FGTopicVoiceView *voiceV = [FGTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceV];
+        _voiceView = voiceV;
+    }
+    return _voiceView;
+}
+
 - (void)setTopics:(FGTopics *)topics{
     _topics = topics;
-    
     
     [self.headView sd_setImageWithURL:[NSURL URLWithString:topics.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
@@ -52,13 +64,44 @@
     [self setButtonTitle:self.commentButton count:topics.comment placeholder:@"评论"];
     [self setButtonTitle:self.shareButton count:topics.repost placeholder:@"分享"];
     
+    // 文字最大尺寸
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * FGMargin, MAXFLOAT);
+    
+    // 文字的最大高度
+    CGFloat textH = [topics.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14]} context:nil].size.height;
+    
     if (topics.type == FGTopicPicture){// 图片帖子
         self.pictureView.topics = topics;
-        self.pictureView.frame = topics.pictureF;
-    }else if (topics.type == FGTopicVideo){// 视频帖子
-        
+        if(topics.pictureF.origin.x == 0){
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 图片显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            if (pictureH >= FGTopicPictureMaxH){// 大图
+                pictureH = FGTopicPictureH;
+                topics.bigPicture = YES;
+            }
+            
+            // 计算图片的frame
+            CGFloat pictureX = FGMargin;
+            CGFloat pictureY = FGTextY + textH + FGMargin;
+            
+            self.pictureView.frame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        }else{
+            self.pictureView.frame = topics.pictureF;
+        }
     }else if (topics.type == FGTopicVoice){// 声音帖子
-        
+        self.voiceView.topics = topics;
+        if(topics.voiceF.origin.x == 0){
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * topics.height / topics.width;
+            CGFloat voiceX = FGMargin;
+            CGFloat voiceY = FGTextY + textH + FGMargin;
+            self.voiceView.frame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+        }else{
+            self.voiceView.frame = topics.voiceF;
+        }
     }
     // 设置文字
     self.text_label.text = topics.text;
