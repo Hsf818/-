@@ -9,6 +9,8 @@
 #import "FGTopics.h"
 #import "NSDate+Extension.h"
 #import "MJExtension.h"
+#import "FGComment.h"
+#import "FGUser.h"
 
 @implementation FGTopics
 
@@ -108,9 +110,17 @@
             _cellHeight += videoH + FGMargin;
         }
         
+        FGComment *cmt = [self.top_cmt firstObject];
+        if(!cmt){
+//            NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+            NSString *content = @"akjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffffakjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffff";
+            CGFloat contentHeight = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            _cellHeight += FGTopicCommentH + contentHeight + FGMargin;
+        }
+        
         _cellHeight += FGTabbarH + FGMargin;
     }
-    
     return _cellHeight;
 }
 

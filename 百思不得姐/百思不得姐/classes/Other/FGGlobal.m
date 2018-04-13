@@ -13,4 +13,5 @@ CGFloat const FGTextY = 55;
 CGFloat const FGTopicPictureMaxH = 1000;
 CGFloat const FGTopicPictureH = 300;
 
+CGFloat const FGTopicCommentH = 20;
 

@@ -10,3 +10,5 @@ UIKIT_EXTERN CGFloat const FGTextY;
 
 UIKIT_EXTERN CGFloat const FGTopicPictureMaxH;
 UIKIT_EXTERN CGFloat const FGTopicPictureH;
+
+UIKIT_EXTERN CGFloat const FGTopicCommentH;

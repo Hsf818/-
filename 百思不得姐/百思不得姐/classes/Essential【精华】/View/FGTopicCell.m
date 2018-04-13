@@ -12,6 +12,8 @@
 #import "FGTopicPictureView.h"
 #import "FGTopicVoiceView.h"
 #import "FGTopicVideoView.h"
+#import "FGComment.h"
+#import "FGUser.h"
 
 @interface FGTopicCell()
 
@@ -27,6 +29,9 @@
 @property (nonatomic, weak) FGTopicPictureView *pictureView;
 @property (nonatomic, weak) FGTopicVoiceView *voiceView;
 @property (nonatomic, weak) FGTopicVideoView *videoView;
+@property (weak, nonatomic) IBOutlet UIView *commentView;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
 @end
 @implementation FGTopicCell
 - (FGTopicVideoView *)videoView
@@ -140,6 +145,15 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+    
+    FGComment *cmt = [topics.top_cmt firstObject];
+    
+    if(!cmt){
+//        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+        self.commentLabel.text = @"akjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffffakjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffff";
+    }else{
+        self.commentView.hidden = YES;
     }
     // 设置文字
     self.text_label.text = topics.text;
