@@ -31,6 +31,8 @@
 @property (nonatomic, copy) NSString *large_image;
 /** 中图片 */
 @property (nonatomic, copy) NSString *middle_image;
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 /** 图片的宽度 */
 @property (nonatomic, assign) CGFloat width;

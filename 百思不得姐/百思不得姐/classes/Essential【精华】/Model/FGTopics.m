@@ -20,6 +20,12 @@
     return @{@"small_image":@"image0",@"middle_image":@"image2",@"large_image":@"image2"};
 }
 
++ (NSDictionary *)mj_objectClassInArray{
+    return @{
+             @"top_cmt":@"FGComment"
+             };
+}
+
 //- (NSString *)create_time{
 //    // 日期类格式化
 //    NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
