@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/hengshenfa/Documents/GitHub/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/classes/Main/View/FGUser.h">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/hengshenfa/Documents/GitHub/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/classes/Main/View/FGUser.m">
-   </FileRef>
-   <FileRef
       location = "group:&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;.xcodeproj">
    </FileRef>
    <FileRef

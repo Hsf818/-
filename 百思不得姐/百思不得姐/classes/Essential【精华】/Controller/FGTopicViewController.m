@@ -13,6 +13,7 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "FGTopicCell.h"
+#import "FGCommentViewController.h"
 
 @interface FGTopicViewController ()
 
@@ -158,6 +159,10 @@ static NSString *FGTopicCellId = @"topic";
     return topics.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    FGCommentViewController *commentVC = [[FGCommentViewController alloc] init];
+    [self.navigationController pushViewController:commentVC animated:YES];
+}
 @end
 
 

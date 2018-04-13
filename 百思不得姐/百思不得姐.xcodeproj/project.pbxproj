@@ -34,7 +34,9 @@
 		F368421A207FA2BB00672DC8 /* FGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3684219207FA2BB00672DC8 /* FGTopicVideoView.xib */; };
 		F368421D20806B4400672DC8 /* FGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F368421C20806B4400672DC8 /* FGComment.m */; };
 		F368422020806B6300672DC8 /* FGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F368421F20806B6300672DC8 /* FGUser.m */; };
-		F36BA62B200B8ABF005D585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36BA62A200B8ABF005D585D /* Assets.xcassets */; };
+		F36842242080F79D00672DC8 /* FGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842222080F79D00672DC8 /* FGCommentViewController.m */; };
+		F36842252080F79D00672DC8 /* FGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36842232080F79D00672DC8 /* FGCommentViewController.xib */; };
+		F36842272080F8F800672DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36842262080F8F700672DC8 /* Assets.xcassets */; };
 		F36BA639200B8ABF005D585D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA638200B8ABF005D585D /* _____Tests.m */; };
 		F36BA644200B8ABF005D585D /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA643200B8ABF005D585D /* _____UITests.m */; };
 		F36BA66F200B8CB7005D585D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA653200B8CB7005D585D /* AppDelegate.m */; };
@@ -125,8 +127,11 @@
 		F368421C20806B4400672DC8 /* FGComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGComment.m; sourceTree = "<group>"; };
 		F368421E20806B6300672DC8 /* FGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FGUser.h; path = "/Users/hengshenfa/Documents/GitHub/百思不得姐/百思不得姐/百思不得姐/classes/Essential【精华】/Model/FGUser.h"; sourceTree = "<absolute>"; };
 		F368421F20806B6300672DC8 /* FGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FGUser.m; path = "/Users/hengshenfa/Documents/GitHub/百思不得姐/百思不得姐/百思不得姐/classes/Essential【精华】/Model/FGUser.m"; sourceTree = "<absolute>"; };
+		F36842212080F79D00672DC8 /* FGCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGCommentViewController.h; sourceTree = "<group>"; };
+		F36842222080F79D00672DC8 /* FGCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGCommentViewController.m; sourceTree = "<group>"; };
+		F36842232080F79D00672DC8 /* FGCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGCommentViewController.xib; sourceTree = "<group>"; };
+		F36842262080F8F700672DC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36BA61B200B8ABF005D585D /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F36BA62A200B8ABF005D585D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36BA62F200B8ABF005D585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36BA634200B8ABF005D585D /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36BA638200B8ABF005D585D /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
@@ -280,7 +285,7 @@
 		F36BA61E200B8ABF005D585D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F36BA62A200B8ABF005D585D /* Assets.xcassets */,
+				F36842262080F8F700672DC8 /* Assets.xcassets */,
 				F36BA62F200B8ABF005D585D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -340,6 +345,9 @@
 				F341D8CA205E2342002DBF73 /* FGRecommendTagsTableViewController.h */,
 				F341D8CB205E2342002DBF73 /* FGRecommendTagsTableViewController.m */,
 				F3212343206A0BC1006F3C78 /* FGTopicPictureViewController.xib */,
+				F36842212080F79D00672DC8 /* FGCommentViewController.h */,
+				F36842222080F79D00672DC8 /* FGCommentViewController.m */,
+				F36842232080F79D00672DC8 /* FGCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -687,9 +695,10 @@
 			files = (
 				F341D8D1205E2509002DBF73 /* FGRecommendTagsCell.xib in Resources */,
 				F3212345206A0BC1006F3C78 /* FGTopicPictureViewController.xib in Resources */,
-				F36BA62B200B8ABF005D585D /* Assets.xcassets in Resources */,
 				F3212351206A98D1006F3C78 /* FGPublishViewController.xib in Resources */,
 				F36BA69A2011B099005D585D /* FGFocusController.xib in Resources */,
+				F36842272080F8F800672DC8 /* Assets.xcassets in Resources */,
+				F36842252080F79D00672DC8 /* FGCommentViewController.xib in Resources */,
 				F36BA6AA2011E13D005D585D /* FGRecommentTagCell.xib in Resources */,
 				F36BA69F2011B86B005D585D /* FGRcommentController.xib in Resources */,
 				F341D8EF20610EAB002DBF73 /* FGTopicCell.xib in Resources */,
@@ -799,6 +808,7 @@
 				F36BA685200B8E5F005D585D /* FGMeController.m in Sources */,
 				F3212344206A0BC1006F3C78 /* FGTopicPictureViewController.m in Sources */,
 				F3212350206A98D1006F3C78 /* FGPublishViewController.m in Sources */,
+				F36842242080F79D00672DC8 /* FGCommentViewController.m in Sources */,
 				F3684218207FA29D00672DC8 /* FGTopicVideoView.m in Sources */,
 				F368421D20806B4400672DC8 /* FGComment.m in Sources */,
 				F341D90020692467002DBF73 /* FGProgressView.m in Sources */,
