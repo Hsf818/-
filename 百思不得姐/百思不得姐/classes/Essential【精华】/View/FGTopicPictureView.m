@@ -11,11 +11,14 @@
 #import "FGTopics.h"
 #import "FGProgressView.h"
 #import "FGTopicPictureViewController.h"
+#import "UIImage+GIF.h"
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImage.h"
 
 @interface FGTopicPictureView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *gif_Image;
-@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *pictureImageView;
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 
 @property (weak, nonatomic) IBOutlet FGProgressView *progressView;
@@ -50,11 +53,7 @@
     
     // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
     [self.progressView setProgress:topics.progress];
-    
     [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:topics.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        
-//        [self.progressView setHidden:NO];
-        
         topics.progress = 1.0 * receivedSize / expectedSize;
         [self.progressView setProgress:topics.progress];
         
@@ -69,7 +68,7 @@
         if(topics.isBigPicture == NO) return ;
         
         // 开启图形上下文
-    UIGraphicsBeginImageContextWithOptions(topics.pictureF.size, YES, 0);
+        UIGraphicsBeginImageContextWithOptions(topics.pictureF.size, YES, 0);
         
         CGFloat width = topics.pictureF.size.width;
         CGFloat height = width * image.size.height / image.size.width;
@@ -82,7 +81,15 @@
     
     // 判断是否为gif
     NSString *extension = topics.large_image.pathExtension;
-    _gif_Image.hidden = ![extension.lowercaseString isEqualToString:@"gif"];
+    if([extension.lowercaseString isEqualToString:@"gif"]){
+        _gif_Image.hidden = NO;
+//        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:topics.large_image]]];
+//        self.pictureImageView.animatedImage = image;
+        [self.progressView setHidden:YES];
+        
+    }else{
+        _gif_Image.hidden = YES;
+    }
     
     // 判断是否需要查看大图
     if (topics.isBigPicture){

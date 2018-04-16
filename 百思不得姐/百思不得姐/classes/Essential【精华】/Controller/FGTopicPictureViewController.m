@@ -11,10 +11,12 @@
 #import "UIImageView+WebCache.h"
 #import "FGProgressView.h"
 #import "SVProgressHUD.h"
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImage.h"
 
 @interface FGTopicPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) UIImageView *largeImage;
+@property (weak, nonatomic) FLAnimatedImageView *largeImage;
 @property (weak, nonatomic) IBOutlet FGProgressView *progressView;
 
 @end
@@ -32,7 +34,7 @@
     
 }
 - (void)setupImageView{
-    UIImageView *imageView = [[UIImageView alloc]init];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc]init];
     imageView.userInteractionEnabled = YES;
     [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(back:)]];
     [self.scrollView addSubview:imageView];

@@ -149,9 +149,8 @@
     
     FGComment *cmt = [topics.top_cmt firstObject];
     
-    if(!cmt){
-//        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
-        self.commentLabel.text = @"akjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffffakjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffff";
+    if(cmt){
+        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
     }else{
         self.commentView.hidden = YES;
     }

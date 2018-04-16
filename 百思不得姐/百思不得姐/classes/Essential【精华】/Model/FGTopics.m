@@ -111,9 +111,8 @@
         }
         
         FGComment *cmt = [self.top_cmt firstObject];
-        if(!cmt){
-//            NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
-            NSString *content = @"akjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffffakjfgshdfgkajfkajsbfkajfnaksfaksdasdnasmbfajfbafbaskjbfkjabfdfsdffff";
+        if(cmt){
+            NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
             CGFloat contentHeight = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
             
             _cellHeight += FGTopicCommentH + contentHeight + FGMargin;
