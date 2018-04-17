@@ -44,7 +44,8 @@
         
         // 代码添加playerBtn到imageView上
         self.playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.playBtn setImage:[UIImage imageNamed:@"video_list_cell_big_icon"] forState:UIControlStateNormal];
+        [self.playBtn setImage:[UIImage imageNamed:@"video-play"] forState:UIControlStateNormal];
+        [self.playBtn setBackgroundImage:[UIImage imageNamed:@"playButtonClick"] forState:UIControlStateNormal];
         [self.playBtn addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
         [videoView addSubview:self.playBtn];
         [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {

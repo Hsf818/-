@@ -33,20 +33,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-PR-wBe" userLabel="播放按钮">
-                    <rect key="frame" x="147" y="105" width="63" height="63"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="63" id="8xL-Se-ugx"/>
-                        <constraint firstAttribute="height" constant="63" id="XbW-P2-wiY"/>
-                    </constraints>
-                    <state key="normal" image="video-play">
-                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <state key="selected" image="playButtonPause"/>
-                    <connections>
-                        <action selector="startVideo:" destination="iN0-l3-epB" eventType="touchUpInside" id="tCN-GL-gZw"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-6R-a4r" userLabel="播放次数">
                     <rect key="frame" x="321" y="0.0" width="36" height="25"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70481057363013699" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,13 +47,11 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="YgM-5Y-rsH" firstAttribute="leading" secondItem="QEc-8Y-jJD" secondAttribute="leading" id="1BW-f5-x8H"/>
-                <constraint firstItem="Jtk-PR-wBe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="520-zs-6GF"/>
                 <constraint firstItem="lFw-6R-a4r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cch-Dm-w5m"/>
                 <constraint firstAttribute="trailing" secondItem="a4G-bW-iaq" secondAttribute="trailing" id="Cd5-ww-pjw"/>
                 <constraint firstAttribute="bottom" secondItem="a4G-bW-iaq" secondAttribute="bottom" id="Md7-Wk-h52"/>
                 <constraint firstAttribute="trailing" secondItem="QEc-8Y-jJD" secondAttribute="trailing" id="VAq-3S-bM8"/>
                 <constraint firstItem="YgM-5Y-rsH" firstAttribute="trailing" secondItem="lFw-6R-a4r" secondAttribute="trailing" id="VZr-Fg-s2b"/>
-                <constraint firstItem="Jtk-PR-wBe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vvu-KX-xaJ"/>
                 <constraint firstItem="YgM-5Y-rsH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="dFE-ax-ZJa"/>
                 <constraint firstAttribute="trailing" secondItem="lFw-6R-a4r" secondAttribute="trailing" id="ddq-TN-0il"/>
                 <constraint firstItem="QEc-8Y-jJD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eap-ft-TfN"/>
@@ -87,7 +71,5 @@
     </objects>
     <resources>
         <image name="imageBackground" width="75" height="15"/>
-        <image name="playButtonPause" width="26" height="26"/>
-        <image name="video-play" width="71" height="71"/>
     </resources>
 </document>
