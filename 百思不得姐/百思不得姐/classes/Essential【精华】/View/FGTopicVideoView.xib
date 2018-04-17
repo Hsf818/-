@@ -33,7 +33,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-PR-wBe">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-PR-wBe" userLabel="播放按钮">
                     <rect key="frame" x="147" y="105" width="63" height="63"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="63" id="8xL-Se-ugx"/>
@@ -42,6 +42,10 @@
                     <state key="normal" image="video-play">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <state key="selected" image="playButtonPause"/>
+                    <connections>
+                        <action selector="startVideo:" destination="iN0-l3-epB" eventType="touchUpInside" id="tCN-GL-gZw"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-6R-a4r" userLabel="播放次数">
                     <rect key="frame" x="321" y="0.0" width="36" height="25"/>
@@ -83,6 +87,7 @@
     </objects>
     <resources>
         <image name="imageBackground" width="75" height="15"/>
+        <image name="playButtonPause" width="26" height="26"/>
         <image name="video-play" width="71" height="71"/>
     </resources>
 </document>

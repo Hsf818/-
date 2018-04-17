@@ -14,8 +14,9 @@
 #import "MJRefresh.h"
 #import "FGTopicCell.h"
 #import "FGCommentViewController.h"
+#import "ZFPlayer.h"
 
-@interface FGTopicViewController ()
+@interface FGTopicViewController ()<ZFPlayerDelegate>
 
 /** 帖子数据 */
 @property (nonatomic, strong) NSMutableArray *topics;
@@ -26,6 +27,10 @@
 /** 上一次的请求参数 */
 @property (nonatomic, strong) NSDictionary *params;
 
+
+@property (nonatomic, strong) ZFPlayerView        *playerView;
+@property (nonatomic, strong) ZFPlayerControlView *controlView;
+
 @end
 
 @implementation FGTopicViewController
@@ -35,6 +40,23 @@
         _topics = [NSMutableArray array];
     }
     return _topics;
+}
+
+// 页面消失时候
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.playerView resetPlayer];
+}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    // 这里设置横竖屏不同颜色的statusbar
+    if (ZFPlayerShared.isLandscape) {
+        return UIStatusBarStyleLightContent;
+    }
+    return UIStatusBarStyleDefault;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return ZFPlayerShared.isStatusBarHidden;
 }
 
 - (void)viewDidLoad {
@@ -146,8 +168,33 @@ static NSString *FGTopicCellId = @"topic";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FGTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:FGTopicCellId];
     
-    cell.topics = self.topics[indexPath.row];
+    FGTopics *topics = self.topics[indexPath.row];
     
+    // 赋值model
+    cell.topics = topics;
+    __block NSIndexPath *weakIndexPath = indexPath;
+    __weak typeof(self)  weakSelf      = self;
+    cell.playBlock = ^(UIButton *btn) {
+        // 取出字典中的第一视频URL
+        NSURL *videoURL = [NSURL URLWithString:topics.videouri];
+        
+        ZFPlayerModel *playerModel = [[ZFPlayerModel alloc] init];
+//        playerModel.title            = @"返回";
+        playerModel.videoURL         = videoURL;
+        playerModel.placeholderImageURLString = topics.large_image;
+        playerModel.scrollView       = weakSelf.tableView;
+        playerModel.indexPath        = weakIndexPath;
+        // player的父视图tag
+//        playerModel.fatherViewTag    = weakCell.videoView.tag;
+        playerModel.fatherViewTag    = 101;
+        
+        // 设置播放控制层和model
+        [weakSelf.playerView playerControlView:nil playerModel:playerModel];
+        // 下载功能
+        weakSelf.playerView.hasDownload = YES;
+        // 自动播放
+        [weakSelf.playerView autoPlayTheVideo];
+    };
     return cell;
 }
 
@@ -163,6 +210,49 @@ static NSString *FGTopicCellId = @"topic";
     FGCommentViewController *commentVC = [[FGCommentViewController alloc] init];
     [self.navigationController pushViewController:commentVC animated:YES];
 }
+
+
+- (ZFPlayerView *)playerView {
+    if (!_playerView) {
+        _playerView = [ZFPlayerView sharedPlayerView];
+        _playerView.delegate = self;
+        // 当cell播放视频由全屏变为小屏时候，不回到中间位置
+        _playerView.cellPlayerOnCenter = NO;
+        
+        // 当cell划出屏幕的时候停止播放
+        // _playerView.stopPlayWhileCellNotVisable = YES;
+        //（可选设置）可以设置视频的填充模式，默认为（等比例填充，直到一个维度到达区域边界）
+        // _playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspect;
+        // 静音
+        // _playerView.mute = YES;
+        // 移除屏幕移除player
+        // _playerView.stopPlayWhileCellNotVisable = YES;
+        
+        _playerView.forcePortrait = NO;
+        
+        ZFPlayerShared.isLockScreen = YES;
+        ZFPlayerShared.isStatusBarHidden = NO;
+    }
+    return _playerView;
+}
+
+- (ZFPlayerControlView *)controlView {
+    if (!_controlView) {
+        _controlView = [[ZFPlayerControlView alloc] init];
+    }
+    return _controlView;
+}
+
+#pragma mark - ZFPlayerDelegate
+
+- (void)zf_playerDownload:(NSString *)url {
+    // 此处是截取的下载地址，可以自己根据服务器的视频名称来赋值
+//    NSString *name = [url lastPathComponent];
+//    [[ZFDownloadManager sharedDownloadManager] downFileUrl:url filename:name fileimage:nil];
+//    // 设置最多同时下载个数（默认是3）
+//    [ZFDownloadManager sharedDownloadManager].maxCount = 4;
+}
+
 @end
 
 

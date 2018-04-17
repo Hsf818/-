@@ -37,6 +37,18 @@
 		F36842242080F79D00672DC8 /* FGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842222080F79D00672DC8 /* FGCommentViewController.m */; };
 		F36842252080F79D00672DC8 /* FGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36842232080F79D00672DC8 /* FGCommentViewController.xib */; };
 		F36842272080F8F800672DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36842262080F8F700672DC8 /* Assets.xcassets */; };
+		F36842472085961400672DC8 /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F368422D2085961400672DC8 /* ZFPlayerModel.m */; };
+		F36842482085961400672DC8 /* UIWindow+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842362085961400672DC8 /* UIWindow+CurrentViewController.m */; };
+		F36842492085961400672DC8 /* UIView+CustomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842372085961400672DC8 /* UIView+CustomControlView.m */; };
+		F368424A2085961400672DC8 /* UIImageView+ZFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842382085961400672DC8 /* UIImageView+ZFCache.m */; };
+		F368424B2085961400672DC8 /* UIViewController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842392085961400672DC8 /* UIViewController+ZFPlayerRotation.m */; };
+		F368424C2085961400672DC8 /* ZFBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = F368423E2085961400672DC8 /* ZFBrightnessView.m */; };
+		F368424D2085961400672DC8 /* ZFPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F368423F2085961400672DC8 /* ZFPlayer.bundle */; };
+		F368424E2085961400672DC8 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842412085961400672DC8 /* ASValuePopUpView.m */; };
+		F368424F2085961400672DC8 /* ZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842422085961400672DC8 /* ZFPlayerControlView.m */; };
+		F36842502085961400672DC8 /* ZFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842432085961400672DC8 /* ZFPlayerView.m */; };
+		F36842512085961400672DC8 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842442085961400672DC8 /* MMMaterialDesignSpinner.m */; };
+		F36842522085961400672DC8 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F36842462085961400672DC8 /* ASValueTrackingSlider.m */; };
 		F36BA639200B8ABF005D585D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA638200B8ABF005D585D /* _____Tests.m */; };
 		F36BA644200B8ABF005D585D /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA643200B8ABF005D585D /* _____UITests.m */; };
 		F36BA66F200B8CB7005D585D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BA653200B8CB7005D585D /* AppDelegate.m */; };
@@ -131,6 +143,31 @@
 		F36842222080F79D00672DC8 /* FGCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGCommentViewController.m; sourceTree = "<group>"; };
 		F36842232080F79D00672DC8 /* FGCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FGCommentViewController.xib; sourceTree = "<group>"; };
 		F36842262080F8F700672DC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F368422D2085961400672DC8 /* ZFPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerModel.m; sourceTree = "<group>"; };
+		F368422E2085961400672DC8 /* ZFPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerControlViewDelegate.h; sourceTree = "<group>"; };
+		F368422F2085961400672DC8 /* ZFPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerControlView.h; sourceTree = "<group>"; };
+		F36842302085961400672DC8 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		F36842322085961400672DC8 /* UIWindow+CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+CurrentViewController.h"; sourceTree = "<group>"; };
+		F36842332085961400672DC8 /* UIView+CustomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomControlView.h"; sourceTree = "<group>"; };
+		F36842342085961400672DC8 /* UIViewController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		F36842352085961400672DC8 /* UIImageView+ZFCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZFCache.h"; sourceTree = "<group>"; };
+		F36842362085961400672DC8 /* UIWindow+CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+CurrentViewController.m"; sourceTree = "<group>"; };
+		F36842372085961400672DC8 /* UIView+CustomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomControlView.m"; sourceTree = "<group>"; };
+		F36842382085961400672DC8 /* UIImageView+ZFCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZFCache.m"; sourceTree = "<group>"; };
+		F36842392085961400672DC8 /* UIViewController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		F368423A2085961400672DC8 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		F368423B2085961400672DC8 /* ZFPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerView.h; sourceTree = "<group>"; };
+		F368423C2085961400672DC8 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		F368423D2085961400672DC8 /* ZFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayer.h; sourceTree = "<group>"; };
+		F368423E2085961400672DC8 /* ZFBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBrightnessView.m; sourceTree = "<group>"; };
+		F368423F2085961400672DC8 /* ZFPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZFPlayer.bundle; sourceTree = "<group>"; };
+		F36842402085961400672DC8 /* ZFPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerModel.h; sourceTree = "<group>"; };
+		F36842412085961400672DC8 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		F36842422085961400672DC8 /* ZFPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerControlView.m; sourceTree = "<group>"; };
+		F36842432085961400672DC8 /* ZFPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerView.m; sourceTree = "<group>"; };
+		F36842442085961400672DC8 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		F36842452085961400672DC8 /* ZFBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBrightnessView.h; sourceTree = "<group>"; };
+		F36842462085961400672DC8 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
 		F36BA61B200B8ABF005D585D /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36BA62F200B8ABF005D585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36BA634200B8ABF005D585D /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +286,46 @@
 				F32123552075247B006F3C78 /* FGPublishView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F368422C2085961400672DC8 /* ZFPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F368422D2085961400672DC8 /* ZFPlayerModel.m */,
+				F368422E2085961400672DC8 /* ZFPlayerControlViewDelegate.h */,
+				F368422F2085961400672DC8 /* ZFPlayerControlView.h */,
+				F36842302085961400672DC8 /* ASValuePopUpView.h */,
+				F36842312085961400672DC8 /* Category */,
+				F368423A2085961400672DC8 /* MMMaterialDesignSpinner.h */,
+				F368423B2085961400672DC8 /* ZFPlayerView.h */,
+				F368423C2085961400672DC8 /* ASValueTrackingSlider.h */,
+				F368423D2085961400672DC8 /* ZFPlayer.h */,
+				F368423E2085961400672DC8 /* ZFBrightnessView.m */,
+				F368423F2085961400672DC8 /* ZFPlayer.bundle */,
+				F36842402085961400672DC8 /* ZFPlayerModel.h */,
+				F36842412085961400672DC8 /* ASValuePopUpView.m */,
+				F36842422085961400672DC8 /* ZFPlayerControlView.m */,
+				F36842432085961400672DC8 /* ZFPlayerView.m */,
+				F36842442085961400672DC8 /* MMMaterialDesignSpinner.m */,
+				F36842452085961400672DC8 /* ZFBrightnessView.h */,
+				F36842462085961400672DC8 /* ASValueTrackingSlider.m */,
+			);
+			path = ZFPlayer;
+			sourceTree = "<group>";
+		};
+		F36842312085961400672DC8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F36842322085961400672DC8 /* UIWindow+CurrentViewController.h */,
+				F36842332085961400672DC8 /* UIView+CustomControlView.h */,
+				F36842342085961400672DC8 /* UIViewController+ZFPlayerRotation.h */,
+				F36842352085961400672DC8 /* UIImageView+ZFCache.h */,
+				F36842362085961400672DC8 /* UIWindow+CurrentViewController.m */,
+				F36842372085961400672DC8 /* UIView+CustomControlView.m */,
+				F36842382085961400672DC8 /* UIImageView+ZFCache.m */,
+				F36842392085961400672DC8 /* UIViewController+ZFPlayerRotation.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		F36BA612200B8ABF005D585D = {
@@ -507,6 +584,7 @@
 		F36BA669200B8CB7005D585D /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F368422C2085961400672DC8 /* ZFPlayer */,
 				F36BA675200B8D7D005D585D /* Category */,
 				F36BA660200B8CB7005D585D /* main.m */,
 				F36BA652200B8CB7005D585D /* AppDelegate.h */,
@@ -697,6 +775,7 @@
 				F3212345206A0BC1006F3C78 /* FGTopicPictureViewController.xib in Resources */,
 				F3212351206A98D1006F3C78 /* FGPublishViewController.xib in Resources */,
 				F36BA69A2011B099005D585D /* FGFocusController.xib in Resources */,
+				F368424D2085961400672DC8 /* ZFPlayer.bundle in Resources */,
 				F36842272080F8F800672DC8 /* Assets.xcassets in Resources */,
 				F36842252080F79D00672DC8 /* FGCommentViewController.xib in Resources */,
 				F36BA6AA2011E13D005D585D /* FGRecommentTagCell.xib in Resources */,
@@ -757,6 +836,7 @@
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -768,6 +848,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -799,11 +880,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36842512085961400672DC8 /* MMMaterialDesignSpinner.m in Sources */,
 				F36BA670200B8CB7005D585D /* main.m in Sources */,
 				F36BA6A22011B8F4005D585D /* FGNavgationController.m in Sources */,
 				F36BA6A92011E13D005D585D /* FGRecommentTagCell.m in Sources */,
 				F36BA67C200B8D9E005D585D /* FGTabBarController.m in Sources */,
 				F32123542075246B006F3C78 /* FGPublishView.m in Sources */,
+				F36842492085961400672DC8 /* UIView+CustomControlView.m in Sources */,
+				F36842472085961400672DC8 /* ZFPlayerModel.m in Sources */,
+				F36842482085961400672DC8 /* UIWindow+CurrentViewController.m in Sources */,
 				F341D8D0205E2509002DBF73 /* FGRecommendTagsCell.m in Sources */,
 				F3212348206A951C006F3C78 /* FGVerticalButton.m in Sources */,
 				F341D8D4205E2B26002DBF73 /* FGRecommendModel.m in Sources */,
@@ -819,21 +904,28 @@
 				F341D8E72060ED02002DBF73 /* FGTopics.m in Sources */,
 				F36BA688200B8E95005D585D /* FGNewController.m in Sources */,
 				F36BA682200B8E4B005D585D /* FGFocusController.m in Sources */,
+				F36842502085961400672DC8 /* ZFPlayerView.m in Sources */,
 				F341D8CC205E2342002DBF73 /* FGRecommendTagsTableViewController.m in Sources */,
 				F341D8F520663C6D002DBF73 /* FGTopicViewController.m in Sources */,
 				F36BA6B420124158005D585D /* FGRightCell.m in Sources */,
 				F36BA66F200B8CB7005D585D /* AppDelegate.m in Sources */,
+				F368424A2085961400672DC8 /* UIImageView+ZFCache.m in Sources */,
 				F36BA694200B9335005D585D /* UIView+frame.m in Sources */,
+				F368424F2085961400672DC8 /* ZFPlayerControlView.m in Sources */,
 				F36BA693200B9335005D585D /* UIImage+image.m in Sources */,
 				F3684213207F124900672DC8 /* FGTopicVoiceView.m in Sources */,
 				F36BA698200B9BE0005D585D /* UIBarButtonItem+FGBarButtonItem.m in Sources */,
 				F36BA68B200B9261005D585D /* FGTabBar.m in Sources */,
 				F341D8F220661787002DBF73 /* NSDate+Extension.m in Sources */,
+				F368424B2085961400672DC8 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				F368422020806B6300672DC8 /* FGUser.m in Sources */,
 				F36BA6A52011DEC8005D585D /* FGRecommentModel.m in Sources */,
 				F36BA67F200B8E37005D585D /* FGEssentialController.m in Sources */,
 				F341D8F82067B82C002DBF73 /* FGTopicPictureView.m in Sources */,
+				F36842522085961400672DC8 /* ASValueTrackingSlider.m in Sources */,
+				F368424C2085961400672DC8 /* ZFBrightnessView.m in Sources */,
 				F341D8EA20610788002DBF73 /* FGGlobal.m in Sources */,
+				F368424E2085961400672DC8 /* ASValuePopUpView.m in Sources */,
 				F36BA69E2011B86B005D585D /* FGRcommentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

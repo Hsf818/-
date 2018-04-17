@@ -10,15 +10,81 @@
 #import "UIImageView+WebCache.h"
 #import "FGTopics.h"
 #import "FGTopicPictureViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface FGTopicVoiceView()
+@interface FGTopicVoiceView()<AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *voiceTime;
 @property (weak, nonatomic) IBOutlet UILabel *voiceTimes;
 @property (weak, nonatomic) IBOutlet UIImageView *voiceImage;
 
+/** 音乐播放器 */
+@property(nonatomic, strong) AVAudioPlayer *musicPlayer;
+@property (weak, nonatomic) IBOutlet UIButton *voiceButton;
+
+/** 之前音乐名 */
+@property (nonatomic, copy) NSString *oldVoice;
+/** 当前音乐名 */
+@property (nonatomic, copy) NSString *currentVoice;
 @end
 
 @implementation FGTopicVoiceView
+
+- (AVAudioPlayer *)musicPlayer{
+    
+    if(_musicPlayer == nil){
+        NSData *audioData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_topics.voiceuri]];
+        
+        NSString *docDirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        
+        NSArray * arr = [_topics.voiceuri componentsSeparatedByString:@"/"];
+        
+        self.currentVoice = arr[arr.count - 1];
+        NSLog(@"arr = %@",arr[arr.count - 1]);
+        
+        NSString *filePath = [NSString stringWithFormat:@"%@/%@", docDirPath,arr[arr.count - 1]];
+        
+        [audioData writeToFile:filePath atomically:NO];
+        
+        
+        NSError *error = nil;
+        NSURL *url = [NSURL fileURLWithPath:filePath];
+        _musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        
+        _musicPlayer.numberOfLoops = 0;
+        
+        _musicPlayer.delegate = self;
+        
+        if (error) {
+            FGLog(@"初始化出错%@",error.localizedDescription);
+            return nil;
+        }
+        
+        //为了支持后台播放
+//        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+//        [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+//        [audioSession setActive:YES error:nil];
+        
+        // 添加通知，拔出耳机后暂停播放
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(routeChange:) name:AVAudioSessionRouteChangeNotification object:nil];
+    }
+    return _musicPlayer;
+}
+
+- (IBAction)startVoice:(id)sender {
+//    if(_oldVoice != _currentVoice){
+//        [_musicPlayer stop];
+//        _musicPlayer = nil;
+//    }
+    if(![self.musicPlayer isPlaying]){
+        [self.musicPlayer play];
+        [self.voiceButton setImage:[UIImage imageNamed:@"playButtonPause"] forState:UIControlStateNormal];
+    }else{
+        [self.musicPlayer pause];
+        [self.voiceButton setImage:[UIImage imageNamed:@"playButtonPlay"] forState:UIControlStateNormal];
+    }
+    self.oldVoice = self.currentVoice;
+
+}
 
 +(instancetype)voiceView{
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
@@ -31,7 +97,6 @@
     self.voiceImage.userInteractionEnabled = YES;
     [self.voiceImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
-
 - (void)showPicture
 {
     FGTopicPictureViewController *showPicture = [[FGTopicPictureViewController alloc] init];

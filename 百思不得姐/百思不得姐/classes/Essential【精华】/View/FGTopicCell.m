@@ -14,6 +14,7 @@
 #import "FGTopicVideoView.h"
 #import "FGComment.h"
 #import "FGUser.h"
+#import "Masonry.h"
 
 @interface FGTopicCell()
 
@@ -28,7 +29,7 @@
 
 @property (nonatomic, weak) FGTopicPictureView *pictureView;
 @property (nonatomic, weak) FGTopicVoiceView *voiceView;
-@property (nonatomic, weak) FGTopicVideoView *videoView;
+
 @property (weak, nonatomic) IBOutlet UIView *commentView;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
@@ -38,10 +39,27 @@
 {
     if(!_videoView){
         FGTopicVideoView *videoView = [FGTopicVideoView videoView];
+        // 设置videoView的tag，在PlayerView中取（建议设置100以上）
+        videoView.tag = 101;
+        
+        // 代码添加playerBtn到imageView上
+        self.playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.playBtn setImage:[UIImage imageNamed:@"video_list_cell_big_icon"] forState:UIControlStateNormal];
+        [self.playBtn addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
+        [videoView addSubview:self.playBtn];
+        [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(videoView);
+            make.width.height.mas_equalTo(50);
+        }];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }
     return _videoView;
+}
+- (void)play:(UIButton *)sender {
+    if (self.playBlock) {
+        self.playBlock(sender);
+    }
 }
 
 - (FGTopicPictureView *)pictureView
@@ -183,6 +201,10 @@
     frame.origin.y += FGMargin;
     
     [super setFrame:frame];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
 }
 
 @end

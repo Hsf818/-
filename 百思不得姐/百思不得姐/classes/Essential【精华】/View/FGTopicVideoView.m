@@ -10,6 +10,8 @@
 #import "UIImageView+WebCache.h"
 #import "FGTopics.h"
 #import "FGTopicPictureViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "Masonry.h"
 
 @interface FGTopicVideoView()
 @property (weak, nonatomic) IBOutlet UILabel *videoPlays;
@@ -24,6 +26,10 @@
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
+- (IBAction)startVideo:(id)sender {
+   
+}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
@@ -31,6 +37,7 @@
     self.videoImage.userInteractionEnabled = YES;
     [self.videoImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
+
 
 - (void)showPicture
 {

@@ -31,6 +31,10 @@
 @property (nonatomic, copy) NSString *large_image;
 /** 中图片 */
 @property (nonatomic, copy) NSString *middle_image;
+/** 视频播放地址 */
+@property (nonatomic, copy) NSString *videouri;
+/** 声音播放地址 */
+@property (nonatomic, copy) NSString *voiceuri;
 /** 最热评论 */
 @property (nonatomic, strong) NSArray *top_cmt;
 
